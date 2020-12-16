@@ -1,0 +1,52 @@
+package testOpenCsv2;
+
+public class Personne {
+
+	private int id;
+	private String firstname;
+	private String lastname;
+	private String phonenumber;
+	
+	public Personne(int id, String firstname, String lastname, String phonenumber) {
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.phonenumber = phonenumber;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getFirstname() {
+		return firstname;
+	}
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+	public String getLastname() {
+		return lastname;
+	}
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+	public String getPhonenumber() {
+		return phonenumber;
+	}
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
+	}
+	
+	public String[] personneToString(Personne personne) {
+		String[] newRecord = {
+				Integer.toString(personne.getId()),
+				personne.getFirstname(),
+				personne.getLastname(),
+				personne.getPhonenumber()
+		};
+		return newRecord;
+	}
+	
+}
